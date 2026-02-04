@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - Bug Bounty Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connexion Pentester</h2>
+
+        <?php if(!empty($error)): ?>
+            <p style="color:red;"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form action="login.php" method="POST">
+            <label>Pseudo ou Email :</label>
+            <input type="text" name="identifiant" required>
+
+            <label>Mot de passe :</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <p>Pas encore de compte ? <a href="register.php">Inscrivez-vous ici</a></p>
+    </div>
+</body>
+</html>

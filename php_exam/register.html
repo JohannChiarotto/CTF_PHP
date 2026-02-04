@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - Bug Bounty Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Inscription Pentester</h2>
+        
+        <?php if(!empty($error)): ?>
+            <p style="color:red;"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form action="register.php" method="POST">
+            <label>Pseudo (Unique) :</label>
+            <input type="text" name="username" required>
+
+            <label>Email (Unique) :</label>
+            <input type="email" name="email" required>
+
+            <label>Mot de passe :</label>
+            <input type="password" name="password" required>
+
+            <label>Confirmez le mot de passe :</label>
+            <input type="password" name="password_confirm" required>
+
+            <label>Niveau de compétence :</label>
+            <select name="skill_level">
+                <option value="Junior">Junior</option>
+                <option value="Intermédiaire">Intermédiaire</option>
+                <option value="Senior">Senior</option>
+            </select>
+
+            <button type="submit">Créer mon compte</button>
+        </form>
+        
+        <p>Déjà inscrit ? <a href="login.php">Connectez-vous ici</a></p>
+    </div>
+</body>
+</html>

@@ -28,6 +28,8 @@ Ce projet à pour but de créer une plateforme de CTF entièrement avec un back-
 
 ## Installation rapide (local)
 
+⚠️ L'installation et le lancement du projet peut être faite de manière différente en fonction de votre OS.
+
 1. Copier le projet sur votre machine
 
 2. Configurer la base de données
@@ -44,10 +46,6 @@ cd /var/www/php_exam
 php -S localhost:8000
 ```
 Puis ouvrir `http://localhost:8000/`.
-
-## Seeding / réinitialisation
-
-- Le dossier `tools/` contient `database.sql` (dump) et `db.php` utilitaire. Gardé pour restauration et documentation. Le script de seed complet a été retiré du dépôt pour rester propre.
 
 ## Structure du projet
 

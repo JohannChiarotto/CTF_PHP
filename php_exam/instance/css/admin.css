@@ -1,0 +1,129 @@
+/* Admin */
+
+.admin-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.admin-link-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.admin-link-card:hover {
+    border-color: #00ffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.admin-link-card h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+
+.admin-link-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.admin-table-wrap {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow-x: auto;
+    backdrop-filter: blur(10px);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.admin-table thead {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+.admin-table th {
+    font-weight: 600;
+    color: #00ffff;
+}
+
+.admin-table tbody tr {
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.admin-table tbody tr:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.admin-table .actions-cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.admin-table form {
+    display: inline;
+}
+
+.admin-table select {
+    padding: 6px 10px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+}
+
+.admin-table button,
+.admin-table .btn-small {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+}
+
+.admin-table button:hover {
+    background: rgba(0, 255, 255, 0.3);
+}
+
+.admin-table .btn-danger {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+.admin-table .btn-danger:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.admin-table .link-btn {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.admin-table .link-btn:hover {
+    text-decoration: underline;
+}
+
+.badge-banned {
+    color: #f87171;
+}
+
+.badge-ok {
+    color: #22c55e;
+}

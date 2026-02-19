@@ -1,0 +1,135 @@
+/* Reprend le même style que style-sell.css avec quelques ajustements */
+@import url('shell.css');
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+.header-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-back {
+    padding: 10px 16px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 2px solid rgba(100, 116, 139, 0.3);
+    color: #94a3b8;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-back:hover {
+    background: rgba(30, 41, 59, 1);
+    color: #e2e8f0;
+}
+
+.btn-back svg {
+    stroke-width: 2;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btn-delete {
+    padding: 10px 20px;
+    background: rgba(239, 68, 68, 0.2);
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    color: #f87171;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-delete:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: #ef4444;
+}
+
+.btn-delete svg {
+    stroke-width: 2;
+}
+
+.permission-warning {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    color: #f87171;
+    margin-bottom: 30px;
+}
+
+.permission-warning svg {
+    flex-shrink: 0;
+    stroke-width: 2;
+}
+
+.permission-warning strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.permission-warning p {
+    color: #fca5a5;
+}
+
+.current-image {
+    border: 2px dashed rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.current-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+.modal-icon.danger {
+    background: rgba(239, 68, 68, 0.2);
+    border: 3px solid #ef4444;
+}
+
+.modal-icon.danger svg {
+    stroke: #ef4444;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(239, 68, 68, 0.4);
+}

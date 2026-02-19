@@ -124,5 +124,26 @@ class AdminController extends Controller
 
         $this->redirect('/admin/challenges');
     }
+
+    public function deleteChallenge(): void
+    {
+        Middleware::requireAdmin();
+        if (!$this->isPost() || !Security::validateCsrfToken($_POST['csrf_token'] ?? null)) {
+            $this->redirect('/admin/challenges');
+        }
+
+        $id = (int) ($_POST['challenge_id'] ?? 0);
+        if ($id <= 0) {
+            $this->redirect('/admin/challenges');
+        }
+
+        $challenge = Challenge::find($id);
+        if (!$challenge) {
+            $this->redirect('/admin/challenges');
+        }
+
+        Challenge::delete($id);
+        $this->redirect('/admin/challenges');
+    }
 }
 

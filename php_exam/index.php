@@ -64,6 +64,7 @@ $router->post('/admin/user/role', [new AdminController(), 'updateRole']);
 $router->post('/admin/user/ban', [new AdminController(), 'banUser']);
 $router->post('/admin/user/reset', [new AdminController(), 'resetUser']);
 $router->post('/admin/challenge/toggle', [new AdminController(), 'toggleChallenge']);
+$router->post('/admin/challenge/delete', [new AdminController(), 'deleteChallenge']);
 
 $router->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
 

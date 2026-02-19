@@ -36,6 +36,11 @@
                                 <input type="hidden" name="challenge_id" value="<?php echo (int) $c['id']; ?>">
                                 <button type="submit"><?php echo $c['is_active'] ? 'Désactiver' : 'Activer'; ?></button>
                             </form>
+                            <form method="post" action="<?php echo $baseUrl; ?>/admin/challenge/delete" style="display: inline;" onsubmit="return confirm('Supprimer ce challenge ? Cette action est irréversible.');">
+                                <input type="hidden" name="csrf_token" value="<?php echo Security::generateCsrfToken(); ?>">
+                                <input type="hidden" name="challenge_id" value="<?php echo (int) $c['id']; ?>">
+                                <button type="submit" class="danger">Supprimer</button>
+                            </form>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -10,6 +10,7 @@
 ## Description
 
 Ce projet à pour but de créer une plateforme de CTF entièrement avec un back-end en `php`, on y retrouve des pseudo challenge que les utilisateurs peuvent acheter, résoudre et soumettre via un flag. Le système supporte les rôles `user`, `creator`, `admin`, un panier d'achat léger, facturation minimale, et un leaderboard.
+**IMPORTANT :** pour le test du projet nous avons créer un user `adminDemo` avec le mot de passe `Azerty1234!`.
 
 ## Fonctionnalités principales
 

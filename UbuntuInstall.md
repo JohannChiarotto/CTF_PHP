@@ -1,6 +1,6 @@
 # Installation et lancement du projet sur Ubuntu
 
-Ce guide explique pas-à-pas comment partir de zéro (install, clone git, configuration MySQL/Apache, import SQL, permissions) pour lancer le projet présent dans ce dépôt. Les commandes sont prêtes à copier-coller. Adaptations : remplacez `https://github.com/JohannChiarotto/RenduTp.git` par l'URL Git de votre dépôt si vous partez d'un clone distant.
+Ce guide explique pas-à-pas comment partir de zéro (install, clone git, configuration MySQL/Apache, import SQL, permissions) pour lancer le projet présent dans ce dépôt. Les commandes sont prêtes à copier-coller. Adaptations : remplacez `https://github.com/JohannChiarotto/CTF_PHP.git` par l'URL Git de votre dépôt si vous partez d'un clone distant.
 
 Pré-requis : une machine Ubuntu (20.04/22.04 ou supérieur), accès sudo.
 
@@ -45,7 +45,7 @@ Si vous partez d'un dépôt Git distant :
 
 ```bash
 sudo rm -rf /var/www/php_exam
-sudo git clone https://github.com/JohannChiarotto/RenduTp.git /var/www/php_exam
+sudo git clone https://github.com/JohannChiarotto/CTF_PHP.git /var/www/php_exam
 sudo chown -R $USER:$USER /var/www/php_exam
 ```
 

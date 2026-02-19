@@ -3,7 +3,7 @@
 ## Membres 
 
 - Dylan THOMAS
-- Theo DARRIBEAU
+- Theo DARRIBAU
 - Johann CHIAROTTO
 **Année :** B2 Cybersécurité
 

@@ -83,8 +83,9 @@
             <h2>Factures</h2>
             <?php foreach ($invoices as $inv): ?>
                 <div class="invoice-item">
-                    <span>Facture #<?php echo (int) $inv['id']; ?></span>
+                    <a href="<?php echo $baseUrl; ?>/invoice?id=<?php echo (int) $inv['id']; ?>">Facture #<?php echo (int) $inv['id']; ?></a>
                     <span class="amount"><?php echo number_format($inv['amount'], 2, ',', ' '); ?> €</span>
+                    <a href="<?php echo $baseUrl; ?>/invoice?id=<?php echo (int) $inv['id']; ?>&download=1" class="link-btn" style="font-size:13px;margin-left:10px;">Télécharger</a>
                 </div>
             <?php endforeach; ?>
             <?php if (empty($invoices)): ?><p style="color:#94a3b8;">Aucune facture.</p><?php endif; ?>

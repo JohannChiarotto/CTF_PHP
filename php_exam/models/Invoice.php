@@ -86,5 +86,24 @@ class Invoice
         $stmt->execute(['uid' => $userId]);
         return $stmt->fetchAll();
     }
+
+    public static function findById(int $invoiceId): ?array
+    {
+        $pdo = getPDO();
+        $stmt = $pdo->prepare('SELECT * FROM `Invoice` WHERE id = :id');
+        $stmt->execute(['id' => $invoiceId]);
+        $res = $stmt->fetch();
+        return $res === false ? null : $res;
+    }
+
+    public static function getItems(int $invoiceId): array
+    {
+        $pdo = getPDO();
+        $stmt = $pdo->prepare(
+            'SELECT ii.*, c.title as challenge_title FROM `InvoiceItem` ii JOIN `Challenge` c ON ii.challenge_id = c.id WHERE ii.invoice_id = :iid'
+        );
+        $stmt->execute(['iid' => $invoiceId]);
+        return $stmt->fetchAll();
+    }
 }
 

@@ -17,6 +17,7 @@ require_once __DIR__ . '/controllers/AccountController.php';
 require_once __DIR__ . '/controllers/AdminController.php';
 require_once __DIR__ . '/controllers/SubmissionController.php';
 require_once __DIR__ . '/controllers/ScoreboardController.php';
+require_once __DIR__ . '/controllers/InvoiceController.php';
 
 // Routes GET
 $router->get('/', [new HomeController(), 'index']);
@@ -33,6 +34,7 @@ $router->get('/cart', [new CartController(), 'index']);
 $router->get('/cart/validate', [new CartController(), 'showValidate']);
 
 $router->get('/account', [new AccountController(), 'index']);
+$router->get('/invoice', [new InvoiceController(), 'show']);
 
 $router->get('/admin', [new AdminController(), 'index']);
 $router->get('/admin/users', [new AdminController(), 'users']);
